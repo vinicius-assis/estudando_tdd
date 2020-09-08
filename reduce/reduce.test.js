@@ -33,17 +33,17 @@ it('reduce([1, 2], (acc, item) => { acc["number-" + item] = item; return acc }, 
   expect(before).to.be.deep.equal(after)
 })
 
-// it('reduce([1, 2], (acc, item, index) => acc + index, 0) should return 1', () => {
-//   const before = reduce([1, 2], (acc, item, index) => acc + index, 0)
-//   const after = 1
-//   expect(before).to.be.equal(after)
-// })
+it('reduce([1, 2], (acc, item, index) => acc + index, 0) should return 1', () => {
+  const before = reduce([1, 2], (acc, item, index) => acc + index, 0)
+  const after = 1
+  expect(before).to.be.equal(after)
+})
 
-// it('reduce([1, 2], (acc, item, index, array) => acc + array[index], 0) should return 3', () => {
-//   const before = reduce([1, 2], (acc, item, index, array) => acc + array[index], 0)
-//   const after = 3
-//   expect(before).to.be.equal(after)
-// })
+it('reduce([1, 2], (acc, item, index, array) => acc + array[index], 0) should return 3', () => {
+  const before = reduce([1, 2], (acc, item, index, array) => acc + array[index], 0)
+  const after = 3
+  expect(before).to.be.equal(after)
+})
 
 // it('reduceRight(["do", "nan", "fer"], (acc, item) => acc + item, "") should return "fernando"', () => {
 //   const before = reduceRight(['do', 'nan', 'fer'], (acc, item) => acc + item, '')
