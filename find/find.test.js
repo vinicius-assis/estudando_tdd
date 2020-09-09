@@ -40,3 +40,7 @@ it('find([1, 2, 3], (item, index, array) => array[index] === 2) should return 2'
   const after = 2
   expect(before).to.be.equal(after)
 })
+
+it('find([], (item) => item) should return undefined', () => {
+  expect(find([], (item) => item)).to.be.equal(undefined)
+})
